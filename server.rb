@@ -9,9 +9,9 @@ if ARGV.empty?
 else
   http_port = ARGV[0]
 end
+puts http_port
 
-
-server = TCPServer.new('0.0.0.0', http_port)
+server = TCPServer.new(http_port)
 
 loop do
   socket = server.accept
